@@ -455,7 +455,8 @@ class ToastUIEditorCore {
     const container = document.createElement('div');
 
     // the `br` tag should be replaced with empty block to separate between blocks
-    container.innerHTML = replaceBRWithEmptyBlock(html);
+    // container.innerHTML = replaceBRWithEmptyBlock(html);
+    container.innerHTML = html;
     const wwNode = DOMParser.fromSchema(this.wwEditor.schema).parse(container);
 
     if (this.isMarkdownMode()) {
